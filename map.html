@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+	<h1>Contact Us</h1>
+	<div> <header>
+        <center>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7933.753518710765!2d39.22359578796336!3d-6.147249958171078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd12820c8bdf9%3A0x19f7449cc3856b61!2sMtopepo!5e0!3m2!1sen!2stz!4v1683206283592!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</center>
+       <form id="contact-form">
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="address">Address</label>
+		<input type="text" id="address" name="address" required>
+
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="comments">Comments</label>
+		<textarea id="comments" name="comments" required></textarea>
+
+		<input type="submit" value="Submit">
+	</form>
+    </header>
+    </div>
+	<script>
+		// Initialize and add the map
+		function initMap() {
+			var location = {lat: 37.7749, lng: -122.4194};
+			var map = new google.maps.Map(
+				document.getElementById('map'), {zoom: 10, center: location});
+			var marker = new google.maps.Marker({position: location, map: map});
+		}
+	</script>
+	<script src="https://goo.gl/maps/JhdDUn8z37HZ3iaQ9"async defer></script>
+
+</body>
+</html>
+<style>
+    iframe {
+        border: solid 5px black;
+    }
+    label {
+        color: #45a049;
+    }
+    body {
+        background-image: url('power.PNG ');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    input[type=text], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=submit] {
+        background-color:magenta;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
